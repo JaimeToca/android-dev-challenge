@@ -15,11 +15,16 @@
  */
 package com.example.androiddevchallenge.ui.theme
 
+import android.view.View
+import android.view.Window
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.luminance
+import androidx.compose.ui.graphics.toArgb
 
 private val DarkColorPalette = darkColors(
     primary = primary,
@@ -33,15 +38,6 @@ private val LightColorPalette = lightColors(
     primaryVariant = primaryLight,
     secondary = secondary,
     secondaryVariant = secondaryLight
-
-    /* Other default colors to override
-        background = Color.White,
-        surface = Color.White,
-        onPrimary = Color.White,
-        onSecondary = Color.Black,
-        onBackground = Color.Black,
-        onSurface = Color.Black,
-    */
 )
 
 @Composable
@@ -59,3 +55,22 @@ fun MyTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable() (
         content = content
     )
 }
+
+@Composable
+fun TransparentTopAppBar(windows: Window) =
+    MyTheme {
+        windows.statusBarColor = MaterialTheme.colors.surface.toArgb()
+        windows.navigationBarColor = MaterialTheme.colors.surface.toArgb()
+
+        @Suppress("DEPRECATION")
+        if (MaterialTheme.colors.surface.luminance() > 0.5f) {
+            windows.decorView.systemUiVisibility = windows.decorView.systemUiVisibility or
+                    View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+        }
+
+        @Suppress("DEPRECATION")
+        if (MaterialTheme.colors.surface.luminance() > 0.5f) {
+            windows.decorView.systemUiVisibility = windows.decorView.systemUiVisibility or
+                    View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR
+        }
+    }
