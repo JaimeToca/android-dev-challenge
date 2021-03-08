@@ -12,7 +12,8 @@ This is an app for adopting your best friend. Based on using Jetpack Compose, it
 ## :bulb: Motivation and Context
 <!--- Optionally point readers to interesting parts of your submission. -->
 <!--- What are you especially proud of? -->
-The main motiviation for this app was to get familiar with the basics of compose API. Most of the data is harcoded and the focus of this app was not the architecture.
+The main motiviation for this app was to get familiar with the basics of compose API. Most of the data is harcoded.
+TODO: There is still room for improvement regarding Theme/colors/fonts and other small things
 
 ## :camera_flash: Screenshots
 <!-- You can add more screenshots here if you like -->
