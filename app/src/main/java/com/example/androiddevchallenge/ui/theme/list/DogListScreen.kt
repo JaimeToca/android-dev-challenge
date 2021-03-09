@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge
+package com.example.androiddevchallenge.ui.theme.list
 
 import android.content.Context
 import android.content.Intent
@@ -29,12 +29,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.example.androiddevchallenge.MainActivity.Companion.navigateToDetails
+import com.example.androiddevchallenge.ui.theme.details.DogDetailsScreen
 import com.example.androiddevchallenge.model.DogUiFactory
 import com.example.androiddevchallenge.model.DogUiModel
 import com.example.androiddevchallenge.ui.theme.*
-import com.example.androiddevchallenge.ui.theme.list.DogList
-import com.example.androiddevchallenge.ui.theme.list.Header
+import com.example.androiddevchallenge.ui.theme.list.MainActivity.Companion.navigateToDetails
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -13,13 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge
+package com.example.androiddevchallenge.ui.theme.details
 
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -33,10 +32,11 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.example.androiddevchallenge.MainActivity.Companion.DOG_ID
+import com.example.androiddevchallenge.R
 import com.example.androiddevchallenge.model.DogUiFactory
 import com.example.androiddevchallenge.model.DogUiModel
 import com.example.androiddevchallenge.ui.theme.*
+import com.example.androiddevchallenge.ui.theme.list.MainActivity.Companion.DOG_ID
 
 class DogDetailsScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
